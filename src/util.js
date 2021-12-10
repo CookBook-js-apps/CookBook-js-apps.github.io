@@ -21,9 +21,23 @@ function createSubmitHandler(callback, ...fields) {
     };
 }
 
+function parseQuery(querystring) {
+    if (querystring == '') {
+        return {};
+    } else {
+        return querystring.split('&').reduce((a, c) => {
+            const [k, v] = c.split('=');
+            a[k] = v;
+            return a;
+        }, {});
+    }
+    
+}
+
 export {
     getUserData,
     setUserData,
     clearUserData,
-    createSubmitHandler
+    createSubmitHandler,
+    parseQuery
 };

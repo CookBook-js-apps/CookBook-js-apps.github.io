@@ -22,6 +22,7 @@ export async function register(username, email, password) {
         id: result.objectId,
         token: result.sessionToken
     };
+    
     setUserData(user);
     return result;
 }

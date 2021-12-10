@@ -3,7 +3,7 @@ import { addOwner, createPointer, createPointerQuery } from './data.js';
 
 const endpoints = {
     comments: '/classes/Comment',
-    commentsByRecipe: (recipeId) => `/classes/Comment?where=${createPointerQuery('recipe', 'Recipe', recipeId)}&include=owner` 
+    commentsByRecipe: (recipeId) => `/classes/Comment?where=${createPointerQuery('recipe', 'Recipe', recipeId)}&include=owner&order=-createdAt` 
 };
 
 export function getCommentsByRecipeId(recipeId) {

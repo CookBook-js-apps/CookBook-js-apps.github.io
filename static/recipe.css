@@ -2,7 +2,7 @@ article {
     display: block;
     width: 720px;
     margin: 32px auto 32px auto;
-    background-color: #cccccc;
+    background-color: #e5c2c2;
     box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 16px;
 }

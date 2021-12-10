@@ -1,4 +1,4 @@
-import { getRecipes } from '../api/recepies.js';
+import { getRecentRecipes } from '../api/recepies.js';
 import { html, until } from '../library.js';
 import { spinner } from './common.js';
 
@@ -19,7 +19,7 @@ const homeTemplate = (recipePromise) => html`
 </section>`;
 
 const recentRecipe = (recipe) => html`
-<a class="card" href=${`/details/${recipe._id}`} >
+<a class="card" href=${`/details/${recipe.objectId}`} >
     <article class="recent">
         <div class="recent-preview"><img src=${recipe.img}></div>
         <div class="recent-title">${recipe.name}</div>
@@ -31,7 +31,7 @@ export function homePage(ctx) {
 }
 
 async function loadRecipes() {
-    const { results: recipes } = await getRecipes();
+    const { results: recipes } = await getRecentRecipes();
 
     if (recipes.length == 0) {
         return html`<p>No recipes found!</p>`;

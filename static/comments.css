@@ -15,6 +15,7 @@
 
 .comment {
     background-color: white;
+    margin: 8px;
 }
 
 .comment p {
@@ -22,9 +23,9 @@
 }
 
 .comment header {
+    background-color: salmon;
+    padding: 8px 16px;   
     border-radius: 16px 16px 0 0;
-    background-color: #cccccc;
-    padding: 8px 16px;
 }
 
 .button {
@@ -41,4 +42,8 @@
     background-color: #6c8b47;
     color: white;
     cursor: pointer;
+}
+
+.comment-date {
+    float: right;
 }
